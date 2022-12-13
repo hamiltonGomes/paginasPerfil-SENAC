@@ -1,0 +1,118 @@
+  <div class="w-full overflow-hidden rounded-lg shadow-xs">
+          <div class="w-full overflow-x-auto">
+            <table class="w-full whitespace-no-wrap">
+              <thead>
+                <tr
+                  class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+                  <th class="px-4 py-3" id="alunos">Aluno / Turma</th>
+                  <th class="px-4 py-3">Curso</th>
+                  <th class="px-4 py-3">Email</th>
+                  <th class="px-4 py-3">Confirmar</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                <tr class="text-gray-700 dark:text-gray-400">
+                  <td class="px-4 py-3">
+                    <div class="flex items-center text-sm">
+                      <!-- Avatar with inset shadow -->
+                      <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                        </svg>                        
+                        <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                      </div>
+                      <div class="">
+                        <input class="font-semibold" id="nome" placeholder="  Adicione o nome do aluno.">
+                        <input class="font-semibold" placeholder="  Adicione a turma." id="turma">
+                      </div>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    <input class="font-semibold" placeholder="  Adicione o curso." id="curso">
+                  </td>
+                  <td class="px-4 py-3 text-sm">
+                    <input class="font-semibold" placeholder="  Adicione o e-mail." id="email">
+                  </td>
+                  <td class="px-4 py-3 text-xs">
+                    <span
+                      class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
+                      Confirmar
+                    </span>
+                  </td>
+                </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
+                  <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3">
+                      <div class="flex items-center text-sm">
+                        <!-- Avatar with inset shadow -->
+                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                          </svg>
+                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                        </div>
+                        <div>
+                          <input class="font-semibold" id="nome" placeholder="Nome Completo">
+                          <input class="font-semibold" placeholder="Turma" id="turma">
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-3 text-sm">
+                      <input class="font-semibold" placeholder="Curso" id="curso">
+                    </td>
+                    <td class="px-4 py-3 text-sm">
+                      <input type="email" class="font-semibold" placeholder="E-mail" id="email">
+                    </td>
+                    <td class="px-4 py-3 text-xs">
+                      <button id="button1"
+                        class="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-full dark:bg-green-700 dark:text-green-100">
+                        Confirmar</button>
+                    </td>
+                  </tr>
+  
+                
+                <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800" id="tabela">
+                  <tr class="text-gray-700 dark:text-gray-400">
+                    <td class="px-4 py-3">
+                      <div class="flex items-center text-sm">
+  
+                        <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
+                          <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                        </div>
+                        <div>
+                          <p class="font-semibold">
+  
+                          </p>
+                          <p class="text-xs text-gray-600 dark:text-gray-400">
+  
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-4 py-3 text-sm">
+  
+                    </td>
+                    <td class="px-4 py-3 text-xs">
+  
+                    </td>
+                    <td class="px-4 py-3 text-sm">
+  
+                    </td>
+                  </tr>
