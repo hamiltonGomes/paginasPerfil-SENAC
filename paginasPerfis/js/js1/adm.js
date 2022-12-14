@@ -72,11 +72,11 @@ const saveClient = () => {
 const createRow = (client, index) => {
     const newRow = document.createElement('tr')
     newRow.innerHTML = `
-        <td>${client.name}</td>
-        <td>00000${client.registration}</td>
-        <td>${client.email}</td>
-        <td>${client.course}</td>
-        <td>
+        <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">${client.name}</td>
+        <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">${client.registration}</td>
+        <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">${client.email}</td>
+        <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">${client.course}</td>
+        <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
             <button type="button" class="button green" id="edit-${index}">Editar</button>
             <button type="button" class="button red" id="delete-${index}">Excluir</button>
         </td>
@@ -119,7 +119,7 @@ const editDelete = (event) => {
             editClient(index)
         } else {
             const client = readClient()[index]
-            const response = confirm(`Desseja realmente excluir o aluno ${client.name}`)
+            const response = confirm(`Deseja realmente excluir o aluno: ${client.name}?`)
             if (response){
                 deleteClient(index)
                 updateTable()
