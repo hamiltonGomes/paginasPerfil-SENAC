@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
   <link rel="shortcut icon" href="toppng.com-point.png" type="image/x-icon">
+  
+  <!-- popup -->
+
+  <link rel="stylesheet" href="./css/css1/popup/poupup.css">
+  <script defer src="./js/js1/app.js"></script>
 
   <!-- Graficos js -->
   <script src="./js/js1/charts-lines.js" defer></script>
@@ -209,7 +214,7 @@
             </li>
             <!-- Notifications menu -->
             <li class="relative">
-              <button class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple"
+              <button id="botaoPopup" class="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple botaoPopup"
                 @click="toggleNotificationsMenu" @keydown.escape="closeNotificationsMenu" aria-label="Notifications"
                 aria-haspopup="true">
                 <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -218,9 +223,21 @@
                   </path>
                 </svg>
                 <!-- Notification badge -->
-                <span aria-hidden="true"
-                  class="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"></span>
+                <!-- <span aria-hidden="true"
+                  class="absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-red-600 border-2 border-white rounded-full dark:border-gray-800"></span> -->
               </button>
+              <!-- JKMNKJK -->
+              <div class="popup-wrapper">
+                <div class="popup">
+
+                  <div class="popup-close">x</div>
+
+                  <div class="popup-content">
+                    <h3>"O feedback" da atividade x já está "disponível", Clique para entrar</h3>
+                    <a class="popup-link" href="#">ver feedback</a>
+                  </div>
+                </div>
+              </div>
             </li>
             <!-- Profile menu -->
             <li class="relative">
