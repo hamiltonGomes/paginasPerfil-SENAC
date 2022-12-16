@@ -13,9 +13,10 @@
   <script src="./js/js1/init-alpine.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
+  <link rel="shortcut icon" href="toppng.com-point.png" type="image/x-icon">
+
 
   <script defer src="js/js1/adm.js"></script>
-  <link rel="stylesheet" href="css/css1/adm/adm.css">
   <link rel="stylesheet" href="css/css1/adm/adm.css">
   <link rel="stylesheet" href="css/css1/adm/button.css">
   <link rel="stylesheet" href="css/css1/adm/modal.css">
@@ -56,14 +57,14 @@
                   d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
                 </path>
               </svg>
-              <span class="ml-4">Perfil</span>
+              <span class="ml-4">Início</span>
             </a>
           </li>
         </ul>
         <ul>
           <li class="relative px-6 py-3">
             <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-              href="#alunos">
+              href="#alunos1">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                 stroke="currentColor" width=11% className="w-5 h-5" stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="2">
@@ -103,14 +104,14 @@
                   d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
                 </path>
               </svg>
-              <span class="ml-4">Perfil</span>
+              <span class="ml-4">Início</span>
             </a>
           </li>
         </ul>
         <ul>
           <li class="relative px-6 py-3">
             <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-              href="#alunos">
+              href="#alunos1">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                 stroke="currentColor" width=11% className="w-5 h-5" stroke-linecap="round" stroke-linejoin="round"
                 stroke-width="2">
@@ -231,15 +232,16 @@
         <div class="w-full overflow-hidden rounded-lg shadow-xs">
           <div class="w-full overflow-x-auto">
             <main>
-              <button type="button" class="button blue mobile" id="register">Cadastrar Aluno</button>
-              <table class="w-full whitespace-no-wrap">
+              <button type="button" class="button blue mobile" id="register">Cadastrar aluno</button>
+              <table id="tableClient" class="records">
                 <thead>
                   <tr
-                    class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-                    <th class="px-4 py-3" id="alunos">Aluno / Turma</th>
-                    <th class="px-4 py-3">Curso</th>
+                    class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800"
+                    id="alunos1">
+                    <th class="px-4 py-3">Aluno</th>
+                    <th class="px-4 py-3">Turma</th>
                     <th class="px-4 py-3">Email</th>
-                    <th class="px-4 py-3">Confirmar</th>
+                    <th class="px-4 py-3">Curso</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -253,11 +255,11 @@
                     <span class="modal-close" id="modalClose">&#10006;</span>
                   </header>
                   <form id="form" class="modal-form">
-                    <input id="name" type="text" data-index="new" class="modal-field" placeholder="Nome do Aluno"
+                    <input id="name" type="text" data-index="new" class="modal-field" placeholder="Nome do aluno"
                       required>
-                    <input id="registration" type="number" class="modal-field"
-                      placeholder="Matricula do Aluno (sem zeros)" min="1" max="999999" required>
-                    <input id="email" type="email" class="modal-field" placeholder="e-mail do Cliente" required>
+                    <input id="registration" type="text" class="modal-field"
+                      placeholder="Turma do aluno" required>
+                    <input id="email" type="email" class="modal-field" placeholder="Email do aluno" required>
                     <input id="course" type="text" class="modal-field" placeholder="Curso do aluno" required>
                   </form>
                   <footer class="modal-footer">

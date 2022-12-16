@@ -3,7 +3,7 @@
 const openModal = () => document.getElementById('modal')
     .classList.add('active')
 
-const closeModal = () => { 
+const closeModal = () => {
     clearFields()
     document.getElementById('modal').classList.remove('active')
 }
@@ -14,17 +14,17 @@ const setLocalStorage = (dbClient) => localStorage.setItem("db_client", JSON.str
 // Crud - Create Read Update Delete
 
 // Crud - DELETE
-const deleteClient = (index) =>{
+const deleteClient = (index) => {
     const dbClient = readClient()
-    dbClient.splice(index,1)
+    dbClient.splice(index, 1)
     setLocalStorage(dbClient)
 }
 
 // Crud - UPDATE
 const updateClient = (index, client) => {
-     const dbClient = readClient()
-     dbClient[index] = client
-     setLocalStorage(dbClient)
+    const dbClient = readClient()
+    dbClient[index] = client
+    setLocalStorage(dbClient)
 }
 
 // Crud - READ
@@ -33,12 +33,12 @@ const readClient = () => getLocalStorage()
 // Crud - CREATE
 const createClient = (client) => {
     const dbClient = getLocalStorage()
-    dbClient.push (client)  
+    dbClient.push(client)
     setLocalStorage(dbClient)
 }
 
 const isValidFields = () => {
-   return document.getElementById('form').reportValidity()
+    return document.getElementById('form').reportValidity()
 }
 
 const clearFields = () => {
@@ -48,7 +48,7 @@ const clearFields = () => {
 
 //Interaction with layout
 const saveClient = () => {
-    if(isValidFields()) {
+    if (isValidFields()) {
         const client = {
             name: document.getElementById('name').value,
             registration: document.getElementById('registration').value,
@@ -56,11 +56,11 @@ const saveClient = () => {
             course: document.getElementById('course').value,
         }
         const index = document.getElementById('name').dataset.index
-        if(index == 'new'){
+        if (index == 'new') {
             createClient(client)
             updateTable()
             closeModal()
-        }else{
+        } else {
             updateClient(index, client)
             updateTable()
             closeModal()
@@ -76,10 +76,6 @@ const createRow = (client, index) => {
         <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">${client.registration}</td>
         <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">${client.email}</td>
         <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">${client.course}</td>
-        <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
-            <button type="button" class="button green" id="edit-${index}">Editar</button>
-            <button type="button" class="button red" id="delete-${index}">Excluir</button>
-        </td>
     `
     document.querySelector('#tableClient>tbody').appendChild(newRow)
 }
@@ -111,16 +107,16 @@ const editClient = (index) => {
 }
 
 const editDelete = (event) => {
-    if (event.target.type == 'button'){
+    if (event.target.type == 'button') {
 
-        const[action, index] = event.target.id.split('-')
+        const [action, index] = event.target.id.split('-')
 
-        if(action == 'edit'){
+        if (action == 'edit') {
             editClient(index)
         } else {
             const client = readClient()[index]
             const response = confirm(`Deseja realmente excluir o aluno: ${client.name}?`)
-            if (response){
+            if (response) {
                 deleteClient(index)
                 updateTable()
             }
