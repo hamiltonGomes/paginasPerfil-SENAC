@@ -1,5 +1,7 @@
 'use strict'
 
+var contador1 = 0
+
 const openModal = () => document.getElementById('modal')
     .classList.add('active')
 
@@ -78,11 +80,17 @@ const createRow = (client, index) => {
         <td class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">${client.course}</td>
     `
     document.querySelector('#tableClient>tbody').appendChild(newRow)
+
+    contador1++
+    var contadorAluno = document.getElementById("contadorAluno")
+    contadorAluno.innerHTML = contador1
+
 }
 
 const clearTable = () => {
     const rows = document.querySelectorAll('#tableClient>tbody tr')
     rows.forEach(row => row.parentNode.removeChild(row))
+    var contador1 = contador1 - 1
 }
 
 const updateTable = () => {
